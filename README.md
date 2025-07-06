@@ -16,6 +16,8 @@ En mi travesía, encontré varios límites técnicos que no pude superar. Aun as
 
 Una vez instalada y habilitada la extensión, simplemente el anfitrión debe utilizar los comandos disponibles.
 
+> Cualquier comando debe iniciar con un `@` y un espacio, no escriba el comando junto al simbolo.
+
 ## ¿Qué comandos se pueden utilizar?
 
 ### `e_plyr_dp_item_enab` y `e_plyr_dp_item_disab`
