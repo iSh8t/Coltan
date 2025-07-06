@@ -24,12 +24,6 @@ Una vez instalada y habilitada, el anfitrión debe utilizar los comandos disponi
 
 Habilita y deshabilita la característica que permite a los sobrevivientes, soltar sus objetos **manteniendo la tecla `e` mientras se empuja una superficie.**
 
-### `e_plyr_dp_item_k_conf`
-
-Establece cuál tecla utilizan los sobrevivientes para soltar sus objetos.
-
-> [Consultar la documentacion de Valve.](https://developer.valvesoftware.com/wiki/Left_4_Dead_2/Scripting/Script_Functions#CTerrorPlayer)
-
 ## ¿Se pueden automatizar los comandos?
 
-Sí, cree en la carpeta `ems` un archivo llamado `coltan` e incluya los comandos y sus parámetros como cualquier archivo de configuración con la extensión `.cfg`.
+Sí, cree en la carpeta `ems` un archivo llamado `coltan` e incluya los comandos y sus parámetros (como cualquier archivo de configuración con la extensión `.cfg`).
