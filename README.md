@@ -2,6 +2,26 @@
 
 Una extensión desarrollada para introducir nuevas características y soluciones a errores en Left 4 Dead 2.
 
-Esta modificacion incluye mejoras y arreglos aplicables solamente desde el host, las cuales son activables/desactivables in-game.
+## ¿Cuáles son las prioridades de este proyecto?
 
-Esto es un proyecto personal prototipo, que queria intentar desarrollar seriamente, en mi travesia, encontre varios limites tecnicos que no pude superar, por ende; no logre llevar este proyecto al verdadero objetivo que tuve en mente. Igualmente, segui adelante desarrollandolo hasta dejarlo lo suficientemente pulido para abandonarlo.
+Una de ellas es la posibilidad de habilitar y deshabilitar las características y soluciones durante una partida.
+
+## ¿Por qué existe este proyecto?
+
+Se trata de un proyecto personal, un prototipo, que intento desarrollar seriamente…
+
+En mi travesía, encontré varios límites técnicos que no pude superar. Aun así, intentaré desarrollar lo más que pueda para brindar una base de código que pueda ser utilizada a futuro, como ejemplo, un ejemplo que me hubiera gustado tener a mano en su momento.
+
+## ¿Cómo se utiliza la extensión?
+
+Una vez instalada y habilitada la extensión, simplemente el anfitrión debe utilizar los comandos disponibles.
+
+## ¿Qué comandos se pueden utilizar?
+
+### `e_plyr_dp_item_enab` y `e_plyr_dp_item_disab`
+
+Habilita y deshabilita la característica que permite a los sobrevivientes, soltar sus objetos **manteniendo la tecla `E` mientras se empuja una superficie.**
+
+## ¿Se pueden automatizar los comandos?
+
+Sí, cree en la carpeta `ems` un archivo llamado `coltan` e incluya los comandos y sus parámetros como cualquier archivo de configuración (con la extensión `.cfg`).
