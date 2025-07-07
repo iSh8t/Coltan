@@ -6,6 +6,30 @@
 {
 	enabled = false
 
+	function Follow (obj)
+	{
+		local att = GetPlayerFromUserID(obj.giver);
+		local shov = GetPlayerFromUserID(obj.taker);
+
+		local act_item = Ent(obj.item);
+
+		local act_item_id = act_item.GetClassname();
+
+		shov.GiveItemWithSkin(act_item_id, NetProps.GetPropInt(act_item, "m_nSkin"));
+
+		DoEntFire("!self", "Kill", "", 0, null, act_item);
+
+		EmitSoundOnClient("Hint.LittleReward", att);
+
+		# Comprueba si el inventario final es de un bot.
+		if (!IsPlayerABot(shov))
+		{
+			EmitSoundOnClient("Hint.LittleReward", shov);
+
+			shov.SwitchToItem(act_item_id);
+		}
+	}
+
 	function OnGameEvent_player_shoved (event)
 	{
 		if (enabled)
@@ -16,6 +40,7 @@
 
 			local act_item_id = act_item.GetClassname();
 
+			# Comprueba si es un objeto lanzable o de curacion.
 			if (IsThirdItemSlot(act_item_id) || IsFourthItemSlot(act_item_id))
 			{
 				local act_item_slot = GetItemSlot(act_item_id);
@@ -26,6 +51,7 @@
 
 				GetInvTable(shov, inv);
 
+				# Comprueba si es obtenible el objeto en el inventario final.
 				if (!(act_item_slot in inv))
 				{
 					att.DropItem(act_item_id);
@@ -39,7 +65,16 @@
 					impulse += att.EyeAngles().Forward().Scale(100);
 
 					act_item.SetVelocity(Vector(0, 0, 0));
+
 					act_item.ApplyAbsVelocityImpulse(impulse);
+
+					local dist = (act_item.GetOrigin() - shov.GetOrigin()).Length();
+
+					local delay = dist / 550;
+
+					delay = (delay < 0.1) ? 0.1 : delay;
+
+					EntFire("worldspawn", "RunScriptCode", "g_ModeScript.PlayerGiveItem.Follow({giver = " + att.GetPlayerUserId() + ", taker = " + shov.GetPlayerUserId() + ", item = " + act_item.GetEntityIndex() + "});", delay);
 				}
 			}
 		}
