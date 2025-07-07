@@ -8,31 +8,32 @@
 
 	function OnGameEvent_entity_shoved (event)
 	{
-		if (enabled)
+		if (enabled && EntIndexToHScript(event.entityid) == null)
 		{
-			local ent = GetPlayerFromUserID(event.attacker);
+			local att = GetPlayerFromUserID(event.attacker);
 
-			if ((ent.GetButtonMask() & (1 << 5)) > 0 && EntIndexToHScript(event.entityid) == null)
+			if (att.GetButtonMask() & (1 << 5))
 			{
-				local act_item_id = ent.GetActiveWeapon().GetClassname();
+				local act_item_id = att.GetActiveWeapon().GetClassname();
 
-				local act_item_slot = GetItemSlot(act_item_id);
-
-				if (act_item_slot == "slot0" || act_item_slot == "slot1")
+				if (!IsSixthItemSlot(act_item_id))
 				{
-					local inv = {}
-
-					GetInvTable(ent, inv);
-
-					if ("slot0" in inv && "slot1" in inv)
+					if (IsFirstItemSlot(act_item_id) || IsSecondItemSlot(act_item_id))
 					{
-						ent.DropItem(act_item_id);
-					}
-				}
+						local inv = {}
 
-				else
-				{
-					ent.DropItem(act_item_id);
+						GetInvTable(att, inv);
+
+						if ("slot0" in inv && "slot1" in inv)
+						{
+							att.DropItem(act_item_id);
+						}
+					}
+
+					else
+					{
+						att.DropItem(act_item_id);
+					}
 				}
 			}
 		}
