@@ -4,14 +4,14 @@
 
 ::PlayerGiveItem <-
 {
-	enabled = false
+	enabled = false,
 
-	function Follow (obj)
+	function Follow (data)
 	{
-		local att = GetPlayerFromUserID(obj.giver);
-		local shov = GetPlayerFromUserID(obj.taker);
+		local att = GetPlayerFromUserID(data.giver);
+		local shov = GetPlayerFromUserID(data.taker);
 
-		local act_item = Ent(obj.item);
+		local act_item = Ent(data.item);
 
 		local act_item_id = act_item.GetClassname();
 
@@ -28,7 +28,7 @@
 
 			shov.SwitchToItem(act_item_id);
 		}
-	}
+	},
 
 	function OnGameEvent_player_shoved (event)
 	{
@@ -74,21 +74,28 @@
 
 					delay = (delay < 0.1) ? 0.1 : delay;
 
-					EntFire("worldspawn", "RunScriptCode", "g_ModeScript.PlayerGiveItem.Follow({giver = " + att.GetPlayerUserId() + ", taker = " + shov.GetPlayerUserId() + ", item = " + act_item.GetEntityIndex() + "});", delay);
+					local sent =
+					{
+						giver = att.GetPlayerUserId(), taker = shov.GetPlayerUserId(),
+
+						item = act_item.GetEntityIndex(),
+					}
+
+					EntFire("worldspawn", "RunScriptCode", "g_ModeScript.PlayerGiveItem.Follow(" + Serialize(sent) + ");", delay);
 				}
 			}
 		}
-	}
+	},
 
 	function OnCommandEvent_e_plyr_gv_item_enab (prompt)
 	{
 		enabled = true;
-	}
+	},
 
 	function OnCommandEvent_e_plyr_gv_item_disab (prompt)
 	{
 		enabled = false;
-	}
+	},
 }
 
 __CollectEventCallbacks(PlayerGiveItem, "OnGameEvent_", "GameEventCallbacks", RegisterScriptGameEventListener);

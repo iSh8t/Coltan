@@ -4,7 +4,7 @@
 
 ::PlayerDropItem <-
 {
-	enabled = false
+	enabled = false,
 
 	function OnGameEvent_entity_shoved (event)
 	{
@@ -21,7 +21,7 @@
 				# Comprueba si el objeto no es un cargable.
 				if (!IsSixthItemSlot(act_item_id))
 				{
-					# Comprueba si el objeto no es un arma.
+					# Comprueba si el objeto es un arma.
 					if (IsFirstItemSlot(act_item_id) || IsSecondItemSlot(act_item_id))
 					{
 						local inv = {}
@@ -42,17 +42,17 @@
 				}
 			}
 		}
-	}
+	},
 
 	function OnCommandEvent_e_plyr_dp_item_enab (prompt)
 	{
 		enabled = true;
-	}
+	},
 
 	function OnCommandEvent_e_plyr_dp_item_disab (prompt)
 	{
 		enabled = false;
-	}
+	},
 }
 
 __CollectEventCallbacks(PlayerDropItem, "OnGameEvent_", "GameEventCallbacks", RegisterScriptGameEventListener);
