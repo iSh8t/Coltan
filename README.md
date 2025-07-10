@@ -12,13 +12,19 @@ En mi travesía, encontré varios límites técnicos que no pude superar. Aun as
 
 Una de ellas es la posibilidad de habilitar y deshabilitar las características y soluciones durante una partida.
 
+## ¿Cómo se maneja la incompatibilidad con otras extensiones?
+
+Se escribió el código lo más flexible posible para no solo poder ser manipulado por el anfitrión, sino también por otras extensiones internamente.
+
+Posiblemente, no cuenta con el mejor control de errores y pueda llegar a fallar en ciertas ocasiones…
+
 ## ¿Cómo se utiliza la extensión?
 
 Una vez instalada y habilitada, el anfitrión debe utilizar los comandos disponibles.
 
-> Cualquier comando debe **iniciar con un `@` y separarse del simbolo.**
+> Cualquier comando debe **iniciar con un `!` y separarse del simbolo.**
 
-## ¿Qué comandos se pueden utilizar?
+## ¿Qué comandos se pueden utilizar para introducir características nuevas?
 
 ### `e_plyr_dp_item_enab` y `e_plyr_dp_item_disab`
 
@@ -28,6 +34,8 @@ Habilita y deshabilita la característica que permite a los sobrevivientes, solt
 
 Habilita y deshabilita la característica que permite a los sobrevivientes, dar sus objetos **al empujar a otro.**
 
+## ¿Qué comandos se pueden utilizar para introducir soluciones a errores?
+
 ## ¿Como se automatizan los comandos?
 
-Cree en la carpeta `ems` un archivo llamado `coltan` e incluya los comandos y sus parámetros (como cualquier archivo de configuración con la extensión `.cfg`).
+Cree en la carpeta `ems` un archivo llamado `coltan` e incluya los comandos y sus parámetros.
