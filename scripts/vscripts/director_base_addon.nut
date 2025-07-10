@@ -2,7 +2,7 @@
 {
 	version =
 	{
-		major = 0, minor = 1, hot = 0,
+		major = 0, minor = 1, revision = 0,
 	},
 }
 
