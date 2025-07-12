@@ -4,11 +4,11 @@ Una extensión desarrollada para introducir nuevas características y soluciones
 
 ## ¿Cuáles son las metas de esta extensión?
 
-1. Posibilidad de habilitar y deshabilitar las funciones de la extensión durante las partidas.
+* Posibilidad de habilitar y deshabilitar las funciones de la extensión durante las partidas.
 
-2. Compatibilidad con otras extensiones mediante código flexible.
+* Compatibilidad con otras extensiones mediante código flexible.
 
-3. Solamente funciones relacionadas con mecánicas (es decir, no se introducirán animaciones, modelos, sonidos…).
+* Solamente funciones relacionadas con mecánicas (es decir, no se introducirán animaciones, modelos, sonidos…).
 
 ## ¿Cómo se utiliza esta extensión?
 
@@ -30,4 +30,4 @@ Cree en la carpeta `ems` un archivo llamado `coltan` e incluya los comandos y su
 
 ## ¿Qué créditos distribuye este proyecto?
 
-1. [Irina Iacob.](https://unsplash.com/es/@kalineri)
+* [Irina Iacob.](https://unsplash.com/es/@kalineri)
