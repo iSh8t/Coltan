@@ -2,7 +2,7 @@
 {
 	"addonSteamAppID"	"550"
 
-	"addonTitle"	"Coltan: An all-in-one add-on with enhancements and fixes"
+	"addonTitle"	"Coltan"
 
 	"addonAuthor"	"Pukt"
 	"addonAuthorSteamID"	"puktpunk"
