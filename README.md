@@ -6,7 +6,7 @@ Además, se intenta que el código sea flexible para permitir una mayor compatib
 
 ## ¿Cómo se descarga e instala la extensión?
 
-Vaya a [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3485586174) y cliquee en suscribirse para descargar e instalar automáticamente (o manualmente [con uno de los lanzamientos](https://github.com/ish8t/coltan/releases)).
+Vaya a [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3485586174) y suscríbase para descargar e instalar automáticamente (o manualmente [con uno de los lanzamientos](https://github.com/ish8t/coltan/releases)).
 
 ## ¿Cómo se utiliza la extensión?
 
