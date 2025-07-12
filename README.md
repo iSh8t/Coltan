@@ -2,21 +2,19 @@
 
 Una extensión desarrollada para introducir nuevas características y soluciones a errores en Left 4 Dead 2.
 
-## ¿Cuáles son las metas?
+## ¿Cuáles son las metas de esta extensión?
 
-1. Posibilidad de habilitar y deshabilitar las características y soluciones durante una partida.
+1. Posibilidad de habilitar y deshabilitar las funciones de la extensión durante las partidas.
 
-2. Flexibilidad del código; para no solo poder ser manipulado por el anfitrión, sino también por otras extensiones internamente.
+2. Compatibilidad con otras extensiones mediante código flexible.
 
-3. Solamente introducir características nuevas relacionadas con mecánicas, y soluciones a errores relacionados con mecánicas ya existentes en el juego; no introducir animaciones, modelos, sonidos, entre otros…
+3. Solamente funciones relacionadas con mecánicas (es decir, no se introducirán animaciones, modelos, sonidos…).
 
-## ¿Cómo se utiliza?
+## ¿Cómo se utiliza esta extensión?
 
 Una vez instalada y habilitada, el anfitrión debe utilizar los comandos disponibles.
 
 > Cualquier comando debe **iniciar con `!`, separado del simbolo.**
-
-## ¿Qué comandos se pueden utilizar?
 
 ### `e_plyr_dp_item_enab` y `e_plyr_dp_item_disab`
 
@@ -26,10 +24,10 @@ Habilita y deshabilita la característica que permite a los sobrevivientes, solt
 
 Habilita y deshabilita la característica que permite a los sobrevivientes, dar sus objetos **al empujar a otro.**
 
-## ¿Como se automatizan los comandos?
+## ¿Cómo se automatizan los comandos?
 
 Cree en la carpeta `ems` un archivo llamado `coltan` e incluya los comandos y sus parámetros.
 
-## ¿Cuáles créditos se distribuyen?
+## ¿Qué créditos distribuye este proyecto?
 
 1. [Irina Iacob.](https://unsplash.com/es/@kalineri)
