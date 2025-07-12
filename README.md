@@ -1,7 +1,5 @@
 # Coltan
 
-Una extensión desarrollada para introducir nuevas características y soluciones a errores en Left 4 Dead 2.
-
 ## ¿Cuáles son las metas de esta extensión?
 
 * Posibilidad de habilitar y deshabilitar las funciones de la extensión durante las partidas.
