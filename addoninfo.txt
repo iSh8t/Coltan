@@ -3,7 +3,7 @@
 	"addonSteamAppID"	"550"
 
 	"addonTitle"		"Coltan"
-	"addonDescription"	"An all-in-one add-on with enhancements and fixes on Left 4 Dead 2."
+	"addonDescription"	"An all-in-one add-on with enhancements and fixes on Left 4 Dead 2"
 
 	"addonAuthor"			"Pukt"
 	"addonAuthorSteamID"	"puktpunk"
