@@ -1,6 +1,6 @@
 # Coltan
 
-Se trata de una extensión para introducir nuevas características y correcciones de errores a Left 4 Dead 2.
+Se trata de una extensión para introducir nuevas características y correcciones de errores a [Left 4 Dead 2.](https://store.steampowered.com/app/550/left_4_dead_2)
 
 Se busca que el código sea flexible para permitir una mayor compatibilidad con varias extensiones.
 
