@@ -28,7 +28,7 @@ Cree en la carpeta `ems` un archivo llamado `coltan` e incluya sus comandos.
 
 ## ¿Quiénes contribuyen directa e indirectamente a la extensión?
 
-* [Irina Iacob,](https://unsplash.com/es/@kalineri) al distribuir la imagen utilizada en la miniatura.
+* [Irina Iacob](https://unsplash.com/es/@kalineri) al distribuir la imagen utilizada en la miniatura.
 
 ## ¿Cómo puedo apoyar al desarrollo de la extensión? 
 
