@@ -16,7 +16,7 @@ Vaya a [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3
 
 Solamente el anfitrión puede utilizar los comandos disponibles a continuación…
 
-> Cualquier comando debe **iniciar con `!` y separarse del simbolo.**
+_Cualquier comando debe **iniciar con `!` y separarse del simbolo.**_
 
 ### `e_plyr_dp_item_enab` y `e_plyr_dp_item_disab`
 
