@@ -36,4 +36,4 @@ Cree en la carpeta `ems` un archivo llamado `coltan` e incluya sus comandos.
 
 ## ¿Cómo puedo apoyar al desarrollo de la extensión? 
 
-Puede apoyar al desarrollo donando a través de [Ko-fi]().
+Puede apoyar al desarrollo donando a través de [Ko-fi.]()
