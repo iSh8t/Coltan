@@ -1,8 +1,12 @@
 # Coltan
 
-Se trata de una extensión para intentar mejorar Left 4 Dead 2 sin ser con características no invasivas.
+Se trata de una extensión para introducir nuevas características y correcciones de errores a Left 4 Dead 2.
 
-Además, se intenta que el código sea flexible para permitir una mayor compatibilidad con otras extensiones.
+Se busca que el código sea flexible para permitir una mayor compatibilidad con varias extensiones.
+
+Asimismo, solamente se introducirá contenido relacionado con mecánicas (es decir, no se introducirán sonidos, modelos, texturas, animaciones…).
+
+Al empezar mi travesía con el desarrollo, encontré varios límites técnicos que no pude superar. Aun así, intentaré terminar lo mejor que pueda para ofrecer una base de código a futuro, como ejemplo.
 
 ## ¿Cómo se descarga e instala la extensión?
 
