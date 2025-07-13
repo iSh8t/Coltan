@@ -12,7 +12,7 @@ Vaya a [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3
 
 Solamente el anfitrión puede utilizar los comandos disponibles a continuación…
 
-> Cualquier comando debe **iniciar con `!`, separado del simbolo.**
+> Cualquier comando debe **iniciar con `!` y separarse del simbolo.**
 
 ### `e_plyr_dp_item_enab` y `e_plyr_dp_item_disab`
 
@@ -26,6 +26,6 @@ Habilita y deshabilita la característica que permite a los sobrevivientes, dar 
 
 Cree en la carpeta `ems` un archivo llamado `coltan` e incluya sus comandos.
 
-## ¿Quiénes contribuyeron directa e indirectamente a la extensión?
+## ¿Quiénes contribuyen directa e indirectamente a la extensión?
 
 * [Irina Iacob.](https://unsplash.com/es/@kalineri)
