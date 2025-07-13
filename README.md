@@ -6,7 +6,7 @@ Se busca que el código sea flexible para permitir una mayor compatibilidad con 
 
 Asimismo, solamente se introducirá contenido relacionado con mecánicas (es decir, no se introducirán sonidos, modelos, texturas, animaciones…).
 
-Al empezar mi travesía con el desarrollo, encontré varios límites técnicos que no pude superar. Aun así, intentaré terminar lo mejor que pueda para ofrecer una base de código a futuro, como ejemplo.
+_Al empezar mi travesía con el desarrollo, encontré varios límites técnicos que no pude superar. Aun así, intentaré terminar lo mejor que pueda para ofrecer una base de código a futuro, como ejemplo._
 
 ## ¿Cómo se descarga e instala la extensión?
 
