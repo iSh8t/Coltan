@@ -14,19 +14,19 @@
 			"text": "Limit the first line to 72 characters or fewer."
 		},
 		{
-			"text": "Follow the commit type 'fix' for bug fixes."
+			"text": "Follow the commit type 'ref' for code refactoring."
 		},
 		{
-			"text": "Follow the commit type 'ref' for code refactoring."
+			"text": "Follow the commit type 'fix' for bug fixes."
 		},
 		{
 			"text": "Follow the commit type 'feat' for new features."
 		},
 		{
-			"text": "Follow the commit type 'misc' if none applies."
+			"text": "Follow the commit type 'etc' if none applies."
 		},
 		{
-			"text": "Follow the commit scope 'script' if the change affects Squirrel (.nut) language files."
+			"text": "Follow the commit scope 'script' if the change affects shell (.sh) files."
 		}
 	]
 }

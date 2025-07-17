@@ -1,10 +1,8 @@
 # Coltan
 
-Se trata de una extensión para introducir nuevas características y correcciones de errores a [Left 4 Dead 2.](https://store.steampowered.com/app/550/left_4_dead_2)
+Se trata de una extensión para introducir nuevas características y correcciones de errores a Left 4 Dead 2.
 
-Se busca que el código sea flexible para permitir una mayor compatibilidad con varias extensiones.
-
-Asimismo, solamente se introducirá contenido relacionado con mecánicas, es decir, no se introducirán sonidos, modelos, texturas, animaciones…
+Se busca que el código sea flexible para permitir una mayor compatibilidad con varias extensiones. Asimismo, solamente se introducirá contenido relacionado con mecánicas, es decir, no se introducirán sonidos, modelos, texturas, animaciones, etcétera.
 
 _Al empezar mi travesía con el desarrollo, encontré varios límites técnicos que no pude superar. Aun así, intentaré terminar lo mejor que pueda para ofrecer una base de código a futuro, como ejemplo._
 
@@ -33,7 +31,3 @@ Cree en la carpeta `ems` un archivo llamado `coltan` e incluya sus comandos.
 ## ¿Quiénes contribuyen directa e indirectamente a la extensión?
 
 * [Irina Iacob](https://unsplash.com/es/@kalineri) al distribuir la imagen utilizada en la miniatura.
-
-## ¿Cómo puedo apoyar al desarrollo de la extensión? 
-
-Puede apoyar al desarrollo donando a través de [Ko-fi.]()
