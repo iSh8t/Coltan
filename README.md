@@ -18,11 +18,7 @@ _Cualquier comando debe **iniciar con `!` y separarse del simbolo.**_
 
 ### `e_plyr_dp_item_enab` y `e_plyr_dp_item_disab`
 
-Habilita y deshabilita la característica que permite a los sobrevivientes, soltar sus objetos **manteniendo la tecla «e» mientras se empuja una superficie.**
-
-### `e_plyr_gv_item_enab` y `e_plyr_gv_item_disab`
-
-Habilita y deshabilita la característica que permite a los sobrevivientes, dar sus objetos **al empujar a otro.**
+Habilita y deshabilita la característica que permite a los sobrevivientes, soltar sus objetos **manteniendo la tecla «e» al caminar, mientras se empuja una superficie.**
 
 ## ¿Cómo se automatizan los comandos de la extensión?
 

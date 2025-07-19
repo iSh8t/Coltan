@@ -1,9 +1,26 @@
-::Coltan <-
+const COLTAN_VERSION_MAJOR = 0;
+const COLTAN_VERSION_MINOR = 2;
+const COLTAN_VERSION_BUILD = 10;
+
+enum ButtonMask
 {
-	version =
-	{
-		major = 0, minor = 1, revision = 0,
-	},
+	Shoot = 1,
+	Jump = 2,
+	Duck = 4,
+	Use = 32,
+	Shove = 2048,
+	Reload = 8192,
+	Walk = 131072,
+}
+
+enum ItemSlot
+{
+	First = "slot0",
+	Second = "slot1",
+	Third = "slot2",
+	Fourth = "slot3",
+	Fifth = "slot4",
+	Sixth = "slot5",
 }
 
 ::GetPrompt <- function (text)
@@ -16,70 +33,6 @@
 		{
 			res.append(v);
 		}
-	}
-
-	return res;
-}
-
-::Serialize <- function (data)
-{
-	local res = "";
-
-	switch (typeof(data))
-	{
-		case "table":
-
-			res = res + "{";
-
-			foreach (k, v in data)
-			{
-				res = res + k;
-
-				res = res + "=";
-
-				res = res + Serialize(v);
-
-				res = res + ",";
-			}
-
-			res = res.slice(0, res.len() - 1);
-
-			res = res + "}";
-
-			break;
-
-		case "array":
-
-			res = res + "[";
-
-			foreach (v in data)
-			{
-				res = res + Serialize(v);
-
-				res = res + ",";
-			}
-
-			res = res.slice(0, res.len() - 1);
-
-			res = res + "]";
-
-			break;
-
-		case "string":
-
-			res = res + "\"";
-
-			res = res + data;
-
-			res = res + "\"";
-
-			break;
-
-		default:
-
-			res = res + data;
-
-			break;
 	}
 
 	return res;
@@ -235,19 +188,16 @@
 		IsSixthItemSlot,
 	]
 
-	foreach (k, v in collec)
+	foreach (ind, func in collec)
 	{
-		if (v.call(this, id))
+		if (func.call(this, id))
 		{
-			return "slot" + k;
+			return "slot" + ind;
 		}
 	}
 }
 
 IncludeScript("enhancement/player_drop_item", getroottable());
-IncludeScript("enhancement/player_give_item", getroottable());
-
-// IncludeScript("fix/door_spawn_consistency", getroottable());
 
 IncludeScript("utility/configuration_file_loader", getroottable());
 IncludeScript("utility/host_command_listener", getroottable());

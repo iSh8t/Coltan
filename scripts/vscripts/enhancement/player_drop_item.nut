@@ -1,43 +1,41 @@
-#
-# Añade la capacidad de tirar objetos a los jugadores.
-#
-
 ::PlayerDropItem <-
 {
 	enabled = false,
 
 	function OnGameEvent_entity_shoved (event)
 	{
-		# Comprueba si la entidad empujada es una superficie.
-		if (enabled && EntIndexToHScript(event.entityid) == null)
+		if (enabled)
 		{
-			local att = GetPlayerFromUserID(event.attacker);
-
-			# Comprueba si se incluye entre las teclas utilizadas la "e".
-			if (att.GetButtonMask() & (1 << 5))
+			if (EntIndexToHScript(event.entityid) == null)
 			{
-				local act_item_id = att.GetActiveWeapon().GetClassname();
+				local att = GetPlayerFromUserID(event.attacker);
 
-				# Comprueba si el objeto no es un cargable.
-				if (!IsSixthItemSlot(act_item_id))
+				local button_mask = att.GetButtonMask();
+
+				if ((button_mask & ButtonMask.Walk) && (button_mask & ButtonMask.Use))
 				{
-					# Comprueba si el objeto es un arma.
-					if (IsFirstItemSlot(act_item_id) || IsSecondItemSlot(act_item_id))
+					local act_weapon = att.GetActiveWeapon();
+
+					local act_weapon_id = act_weapon.GetClassname();
+
+					if (IsFirstItemSlot(act_weapon_id) || IsSecondItemSlot(act_weapon_id))
 					{
 						local inv = {}
 
 						GetInvTable(att, inv);
 
-						# Comprueba si al menos se disponen de dos armas.
-						if ("slot0" in inv && "slot1" in inv)
+						if (ItemSlot.First in inv && ItemSlot.Second in inv)
 						{
-							att.DropItem(act_item_id);
+							att.DropItem(act_weapon_id);
 						}
 					}
 
 					else
 					{
-						att.DropItem(act_item_id);
+						if (!IsSixthItemSlot(act_weapon_id))
+						{
+							att.DropItem(act_weapon_id);
+						}
 					}
 				}
 			}
