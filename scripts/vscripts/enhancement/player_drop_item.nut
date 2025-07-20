@@ -2,6 +2,23 @@
 {
 	enabled = false,
 
+	function GetRestantWeapon (inv, except)
+	{
+		local collec =
+		[
+			ItemSlot.First,
+			ItemSlot.Second,
+		]
+
+		foreach (slot in collec)
+		{
+			if (slot != except && slot in inv)
+			{
+				return inv[slot];
+			}
+		}
+	},
+
 	function OnGameEvent_entity_shoved (event)
 	{
 		if (enabled)
@@ -10,32 +27,41 @@
 			{
 				local att = GetPlayerFromUserID(event.attacker);
 
-				local button_mask = att.GetButtonMask();
-
-				if ((button_mask & ButtonMask.Walk) && (button_mask & ButtonMask.Use))
+				if ((att.GetButtonMask() & ButtonMask.Walk) && (att.GetButtonMask() & ButtonMask.Use))
 				{
 					local act_weapon = att.GetActiveWeapon();
 
-					local act_weapon_id = act_weapon.GetClassname();
+					local act_weapon_slot = GetItemSlot(act_weapon.GetClassname());
 
-					if (IsFirstItemSlot(act_weapon_id) || IsSecondItemSlot(act_weapon_id))
+					switch (act_weapon_slot)
 					{
-						local inv = {}
+						case ItemSlot.First:
+						case ItemSlot.Second:
 
-						GetInvTable(att, inv);
+							local inv = {}
 
-						if (ItemSlot.First in inv && ItemSlot.Second in inv)
-						{
-							att.DropItem(act_weapon_id);
-						}
-					}
+							GetInvTable(att, inv);
 
-					else
-					{
-						if (!IsSixthItemSlot(act_weapon_id))
-						{
-							att.DropItem(act_weapon_id);
-						}
+							local rest_inv_weapon = GetRestantWeapon(inv, act_weapon_slot);
+
+							if (rest_inv_weapon != null)
+							{
+								att.SwitchToItem(rest_inv_weapon.GetClassname());
+
+								att.DropItem(act_weapon.GetClassname());
+							}
+
+							break;
+
+						case ItemSlot.Sixth:
+
+							break;
+
+						default:
+
+							att.DropItem(act_weapon.GetClassname());
+
+							break;
 					}
 				}
 			}

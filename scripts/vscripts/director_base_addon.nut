@@ -1,6 +1,6 @@
 const COLTAN_VERSION_MAJOR = 0;
-const COLTAN_VERSION_MINOR = 2;
-const COLTAN_VERSION_BUILD = 10;
+const COLTAN_VERSION_MINOR = 3;
+const COLTAN_VERSION_BUILD = 0;
 
 enum ButtonMask
 {
@@ -188,11 +188,11 @@ enum ItemSlot
 		IsSixthItemSlot,
 	]
 
-	foreach (ind, func in collec)
+	foreach (k, func in collec)
 	{
 		if (func.call(this, id))
 		{
-			return "slot" + ind;
+			return "slot" + k;
 		}
 	}
 }
