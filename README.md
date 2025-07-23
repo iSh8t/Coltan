@@ -20,6 +20,14 @@ _Cualquier comando debe **iniciar con `!` y separarse del simbolo.**_
 
 Habilita y deshabilita la característica que permite a los sobrevivientes, soltar sus objetos **manteniendo la tecla «e» al caminar, mientras se empuja una superficie.**
 
+### ~~`e_plyr_gv_item_enab` y `e_plyr_gv_item_disab`~~
+
+Habilita y deshabilita la caracteristica que permite a los sobrevivientes, dar sus objetos **al empujar a otro.**
+
+### `e_plyr_door_vnt_open_enab` y `e_plyr_door_vnt_open_disab`
+
+Habilita y deshabilita la caracteristica que permite a los sobrevivientes, abrir las puertas **al empujarlas mientras corren.**
+
 ## ¿Cómo se automatizan los comandos de la extensión?
 
 Cree en la carpeta `ems` un archivo llamado `coltan` e incluya sus comandos.

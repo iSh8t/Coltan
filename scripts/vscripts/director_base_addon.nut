@@ -7,7 +7,12 @@ enum ButtonMask
 	Shoot = 1,
 	Jump = 2,
 	Duck = 4,
+	Forward = 8,
+	Back = 16,
 	Use = 32,
+	Cancel = 64,
+	Left = 512,
+	Right = 1024,
 	Shove = 2048,
 	Reload = 8192,
 	Walk = 131072,
@@ -197,7 +202,7 @@ enum ItemSlot
 	}
 }
 
-IncludeScript("enhancement/player_drop_item", getroottable());
+IncludeScript("enhance/player_drop_item", getroottable());
 
 IncludeScript("utility/configuration_file_loader", getroottable());
 IncludeScript("utility/host_command_listener", getroottable());

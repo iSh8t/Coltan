@@ -27,7 +27,9 @@
 			{
 				local att = GetPlayerFromUserID(event.attacker);
 
-				if ((att.GetButtonMask() & ButtonMask.Walk) && (att.GetButtonMask() & ButtonMask.Use))
+				local button_mask_pressed = NetProps.GetPropInt(att, "m_nButtons");
+
+				if ((button_mask_pressed & ButtonMask.Walk) && (button_mask_pressed & ButtonMask.Use))
 				{
 					local act_weapon = att.GetActiveWeapon();
 
