@@ -2,6 +2,21 @@
 {
 	enabled = false,
 
+	function OnGameEvent_player_incapacitated_start (event)
+	{
+		if (enabled)
+		{
+			local player = GetPlayerFromUserID(event.userid);
+
+			local act_weapon = player.GetActiveWeapon();
+
+			if (IsFirstItemSlot(act_weapon.GetClassname()))
+			{
+				player.DropItem(act_weapon.GetClassname());
+			}
+		}
+	},
+
 	function OnGameEvent_charger_carry_start (event)
 	{
 		if (enabled)

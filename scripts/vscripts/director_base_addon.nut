@@ -206,7 +206,6 @@ enum ItemSlot
 	}
 }
 
-# IncludeScript("enhance/player_violent_open_door", getroottable());
 IncludeScript("enhance/player_drop_item", getroottable());
 
 IncludeScript("fix/player_damage_consistency", getroottable());
