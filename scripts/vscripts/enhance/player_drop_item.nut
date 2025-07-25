@@ -74,12 +74,12 @@
 		}
 	},
 
-	function OnCommandEvent_e_plyr_dp_item_enab (prompt)
+	function OnCommandEvent_e_pl_drop_item_enab (prompt)
 	{
 		enabled = true;
 	},
 
-	function OnCommandEvent_e_plyr_dp_item_disab (prompt)
+	function OnCommandEvent_e_pl_drop_item_disab (prompt)
 	{
 		enabled = false;
 	},

@@ -16,11 +16,11 @@ Solamente el anfitrión puede utilizar los comandos disponibles a continuación�
 
 _Cualquier comando debe **iniciar con `!` y separarse del simbolo.**_
 
-### `e_plyr_dp_item_enab` y `e_plyr_dp_item_disab`
+### `e_pl_drop_item_enab` y `e_pl_drop_item_disab`
 
 Habilita y deshabilita la característica que permite a los sobrevivientes, soltar sus objetos **manteniendo la tecla «e» al caminar, mientras se empuja una superficie.**
 
-### `f_plyr_dmg_cons_enab` y `f_plyr_dmg_cons_disab`
+### `f_pl_damage_cons_enab` y `f_pl_damage_cons_disab`
 
 Habilita y deshabilita la caracteristica que permite a los infectados, soltar los objetos de los **sobrevivientes al infligirles daño.**
 

@@ -182,12 +182,12 @@
 		}
 	},
 
-	function OnCommandEvent_f_plyr_dmg_cons_enab (prompt)
+	function OnCommandEvent_f_pl_damage_cons_enab (prompt)
 	{
 		enabled = true;
 	},
 
-	function OnCommandEvent_f_plyr_dmg_cons_disab (prompt)
+	function OnCommandEvent_f_pl_damage_cons_disab (prompt)
 	{
 		enabled = false;
 	},
