@@ -10,9 +10,50 @@
 
 			local act_weapon = player.GetActiveWeapon();
 
-			if (IsFirstItemSlot(act_weapon.GetClassname()))
+			local act_weapon_slot = GetItemSlot(act_weapon.GetClassname());
+
+			switch (act_weapon_slot)
 			{
-				player.DropItem(act_weapon.GetClassname());
+				case ItemSlot.Second:
+				case ItemSlot.Third:
+				case ItemSlot.Fifth:
+				case ItemSlot.Sixth:
+
+					break;
+
+				default:
+
+					player.DropItem(act_weapon.GetClassname());
+
+					break;
+			}
+		}
+	},
+
+	function OnGameEvent_player_ledge_grab (event)
+	{
+		if (enabled)
+		{
+			local player = GetPlayerFromUserID(event.userid);
+
+			local act_weapon = player.GetActiveWeapon();
+
+			local act_weapon_slot = GetItemSlot(act_weapon.GetClassname());
+
+			switch (act_weapon_slot)
+			{
+				case ItemSlot.Second:
+				case ItemSlot.Third:
+				case ItemSlot.Fifth:
+				case ItemSlot.Sixth:
+
+					break;
+
+				default:
+
+					player.DropItem(act_weapon.GetClassname());
+
+					break;
 			}
 		}
 	},
@@ -32,6 +73,7 @@
 				case ItemSlot.Second:
 				case ItemSlot.Third:
 				case ItemSlot.Fifth:
+				case ItemSlot.Sixth:
 
 					break;
 
@@ -62,6 +104,7 @@
 				switch (act_weapon_slot)
 				{
 					case ItemSlot.Second:
+					case ItemSlot.Sixth:
 
 						break;
 
@@ -83,6 +126,7 @@
 					case ItemSlot.Second:
 					case ItemSlot.Third:
 					case ItemSlot.Fifth:
+					case ItemSlot.Sixth:
 
 						break;
 
@@ -114,6 +158,7 @@
 				case ItemSlot.Second:
 				case ItemSlot.Third:
 				case ItemSlot.Fifth:
+				case ItemSlot.Sixth:
 
 					break;
 
@@ -149,6 +194,7 @@
 					case ItemSlot.Second:
 					case ItemSlot.Third:
 					case ItemSlot.Fifth:
+					case ItemSlot.Sixth:
 
 						break;
 
@@ -181,6 +227,7 @@
 				switch (act_weapon_slot)
 				{
 					case ItemSlot.Second:
+					case ItemSlot.Sixth:
 
 						break;
 
