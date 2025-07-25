@@ -25,13 +25,13 @@
 		{
 			if (EntIndexToHScript(event.entityid) == null)
 			{
-				local att = GetPlayerFromUserID(event.attacker);
+				local player = GetPlayerFromUserID(event.attacker);
 
-				local button_mask_pressed = NetProps.GetPropInt(att, "m_nButtons");
+				local button_mask_pressed = NetProps.GetPropInt(player, "m_nButtons");
 
 				if ((button_mask_pressed & ButtonMask.Walk) && (button_mask_pressed & ButtonMask.Use))
 				{
-					local act_weapon = att.GetActiveWeapon();
+					local act_weapon = player.GetActiveWeapon();
 
 					local act_weapon_slot = GetItemSlot(act_weapon.GetClassname());
 
@@ -42,15 +42,17 @@
 
 							local inv = {}
 
-							GetInvTable(att, inv);
+							GetInvTable(player, inv);
 
 							local rest_inv_weapon = GetRestantWeapon(inv, act_weapon_slot);
 
 							if (rest_inv_weapon != null)
 							{
-								att.SwitchToItem(rest_inv_weapon.GetClassname());
+								player.SwitchToItem(rest_inv_weapon.GetClassname());
 
-								att.DropItem(act_weapon.GetClassname());
+								player.DropItem(act_weapon.GetClassname());
+
+								# Hay que agragar lineas de dialogo.
 							}
 
 							break;
@@ -61,7 +63,9 @@
 
 						default:
 
-							att.DropItem(act_weapon.GetClassname());
+							player.DropItem(act_weapon.GetClassname());
+
+							# Hay que agragar lineas de dialogo.
 
 							break;
 					}

@@ -20,13 +20,9 @@ _Cualquier comando debe **iniciar con `!` y separarse del simbolo.**_
 
 Habilita y deshabilita la característica que permite a los sobrevivientes, soltar sus objetos **manteniendo la tecla «e» al caminar, mientras se empuja una superficie.**
 
-### ~~`e_plyr_gv_item_enab` y `e_plyr_gv_item_disab`~~
+### `f_plyr_dmg_cons_enab` y `f_plyr_dmg_cons_disab`
 
-Habilita y deshabilita la caracteristica que permite a los sobrevivientes, dar sus objetos **al empujar a otro.**
-
-### `e_plyr_door_vnt_open_enab` y `e_plyr_door_vnt_open_disab`
-
-Habilita y deshabilita la caracteristica que permite a los sobrevivientes, abrir las puertas **al empujarlas mientras corren.**
+Habilita y deshabilita la caracteristica que permite a los infectados, soltar los objetos de los **sobrevivientes al infligirles daño.**
 
 ## ¿Cómo se automatizan los comandos de la extensión?
 

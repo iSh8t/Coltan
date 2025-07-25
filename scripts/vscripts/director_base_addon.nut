@@ -1,7 +1,3 @@
-const COLTAN_VERSION_MAJOR = 0;
-const COLTAN_VERSION_MINOR = 3;
-const COLTAN_VERSION_BUILD = 0;
-
 enum ButtonMask
 {
 	Shoot = 1,
@@ -26,6 +22,14 @@ enum ItemSlot
 	Fourth = "slot3",
 	Fifth = "slot4",
 	Sixth = "slot5",
+}
+
+::Coltan <-
+{
+	version =
+	{
+		major = 0, minor = 3, revision = 0,
+	},
 }
 
 ::GetPrompt <- function (text)
@@ -202,7 +206,10 @@ enum ItemSlot
 	}
 }
 
+# IncludeScript("enhance/player_violent_open_door", getroottable());
 IncludeScript("enhance/player_drop_item", getroottable());
+
+IncludeScript("fix/player_damage_consistency", getroottable());
 
 IncludeScript("utility/configuration_file_loader", getroottable());
 IncludeScript("utility/host_command_listener", getroottable());
