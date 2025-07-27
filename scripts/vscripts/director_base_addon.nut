@@ -28,7 +28,7 @@ enum ItemSlot
 {
 	version =
 	{
-		major = 0, minor = 3, revision = 1,
+		major = 0, minor = 3, revision = 2,
 	},
 }
 
@@ -208,7 +208,7 @@ enum ItemSlot
 
 IncludeScript("enhance/player_drop_item", getroottable());
 
-IncludeScript("fix/player_damage_consistency", getroottable());
+IncludeScript("fix/player_damage_drop_item_consistency", getroottable());
 
 IncludeScript("utility/configuration_file_loader", getroottable());
 IncludeScript("utility/host_command_listener", getroottable());

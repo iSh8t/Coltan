@@ -1,4 +1,4 @@
-::PlayerDamageConsistency <-
+::PlayerDamageDropItemConsistency <-
 {
 	enabled = false,
 
@@ -244,17 +244,17 @@
 		}
 	},
 
-	function OnCommandEvent_f_pl_damage_cons_enab (prompt)
+	function OnCommandEvent_f_pl_dam_drop_item_cons_enab (prompt)
 	{
 		enabled = true;
 	},
 
-	function OnCommandEvent_f_pl_damage_cons_disab (prompt)
+	function OnCommandEvent_f_pl_dam_drop_item_cons_disab (prompt)
 	{
 		enabled = false;
 	},
 }
 
-__CollectEventCallbacks(PlayerDamageConsistency, "OnGameEvent_", "GameEventCallbacks", RegisterScriptGameEventListener);
+__CollectEventCallbacks(PlayerDamageDropItemConsistency, "OnGameEvent_", "GameEventCallbacks", RegisterScriptGameEventListener);
 
-__CollectEventCallbacks(PlayerDamageConsistency, "OnCommandEvent_", "CommandEventCallbacks", null);
+__CollectEventCallbacks(PlayerDamageDropItemConsistency, "OnCommandEvent_", "CommandEventCallbacks", null);

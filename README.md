@@ -20,11 +20,11 @@ _Cualquier comando debe **iniciar con `!` y separarse del simbolo.**_
 
 Habilita y deshabilita la característica que permite a los sobrevivientes, soltar sus objetos **manteniendo la tecla «e» al caminar, mientras se empuja una superficie.**
 
-### `f_pl_damage_cons_enab` y `f_pl_damage_cons_disab`
+### `f_pl_dam_drop_item_cons_enab` y `f_pl_dam_drop_item_cons_disab`
 
-Habilita y deshabilita la caracteristica que permite a los infectados, soltar los objetos de los **sobrevivientes al infligirles daño.**
+Habilita y deshabilita la corrección a la inconsistencia del daño, soltando los objetos de los **sobrevivientes al infligirse daño (a veces).**
 
-### ~~`e_pl_give_item_enab` y `e_pl_give_item_disab`~~
+### ~~`e_pl_take_and_give_item_enab` y `e_pl_take_and_give_item_disab`~~
 
 ## ¿Cómo se automatizan los comandos de la extensión?
 
