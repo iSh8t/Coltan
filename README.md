@@ -2,10 +2,6 @@
 
 Se trata de una extensión para introducir nuevas características y correcciones de errores a Left 4 Dead 2.
 
-Se busca que el código sea flexible para permitir una mayor compatibilidad con varias extensiones. Asimismo, solamente se introducirá contenido relacionado con mecánicas, es decir, no se introducirán sonidos, modelos, texturas, animaciones, etcétera.
-
-_Al empezar mi travesía con el desarrollo, encontré varios límites técnicos que no pude superar. Aun así, intentaré terminar lo mejor que pueda para ofrecer una base de código a futuro, como ejemplo._
-
 ## ¿Cómo se descarga e instala la extensión?
 
 Vaya a [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3485586174) y suscríbase para descargar e instalar automáticamente (o manualmente [mediante uno de los lanzamientos](https://github.com/ish8t/coltan/releases)).
@@ -30,6 +26,18 @@ Habilita y deshabilita la corrección a la inconsistencia del daño, soltando lo
 
 Cree en la carpeta `ems` un archivo llamado `coltan` e incluya sus comandos.
 
+## ¿Cuales es la informacion tecnica de la extension?
+
+### ¿Cómo se acoplan otras extensiones a esta?
+
+Se puede utilizar el codigo del proyecto como una especie de libreria, ya que; al permitir cambiar el comportamiento a nivel de codigo, puede simplemente desactivar enteramente la extension si asi lo requiere.
+
+Aunque, no se garantiza que el codigo no colisione con otras extensiones por la magnitud de funciones involucradas, no deberia ser problematico al tener en cuenta que la mayoria de funciones en las otras extensiones, probablemente ya las disponga en esta extension.
+
+### ¿Cómo se controlan los errores de la extension?
+
+Al utilizar una estructua de callbacks por eventos, hace no tan esencial el uso de try/catch para los errores. Aunque no evita los errores criticos, permite que otros errores no provoquen un cierre en mitad de partida.
+
 ## ¿Quiénes contribuyen directa e indirectamente a la extensión?
 
-* [Irina Iacob](https://unsplash.com/es/@kalineri) al distribuir la imagen utilizada en la miniatura.
+* [Irina Iacob](https://unsplash.com/es/@kalineri) autora de la imagen utilizada en la miniatura.
