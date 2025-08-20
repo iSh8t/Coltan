@@ -35,9 +35,9 @@
 
 		local button_mask = NetProps.GetPropInt(pl, "m_nButtons");
 
-		local valid_button_mask = (button_mask & ButtonMask.Walk) && (button_mask & ButtonMask.Use);
+		local is_valid_button_mask = (button_mask & ButtonMask.Walk) && (button_mask & ButtonMask.Use);
 
-		if (!valid_button_mask)
+		if (!is_valid_button_mask)
 		{
 			return;
 		}

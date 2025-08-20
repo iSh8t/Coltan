@@ -1,4 +1,4 @@
-::PlayerDamageDropItemConsistency <-
+::DamagePlayerDropItemConsistency <-
 {
 	enabled = false,
 
@@ -281,6 +281,6 @@
 	},
 }
 
-__CollectEventCallbacks(PlayerDamageDropItemConsistency, "OnGameEvent_", "GameEventCallbacks", RegisterScriptGameEventListener);
+__CollectEventCallbacks(DamagePlayerDropItemConsistency, "OnGameEvent_", "GameEventCallbacks", RegisterScriptGameEventListener);
 
-__CollectEventCallbacks(PlayerDamageDropItemConsistency, "OnConsoleEvent_", "ConsoleEventCallbacks", null);
+__CollectEventCallbacks(DamagePlayerDropItemConsistency, "OnConsoleEvent_", "ConsoleEventCallbacks", null);
