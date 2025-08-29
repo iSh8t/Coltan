@@ -28,6 +28,8 @@
 
 				pl.DropItem(act_weapon.GetClassname());
 
+				EmitSoundOnClient(ClientSound.ImpactSoft, pl);
+
 				break;
 		}
 	},
@@ -57,6 +59,8 @@
 			default:
 
 				pl.DropItem(act_weapon.GetClassname());
+
+				EmitSoundOnClient(ClientSound.ImpactSoft, pl);
 
 				break;
 		}
@@ -89,6 +93,8 @@
 				if (RandomInt(0, 99) < 40)
 				{
 					pl.DropItem(act_weapon.GetClassname());
+
+					EmitSoundOnClient(ClientSound.ImpactHard, pl);
 				}
 
 				break;
@@ -122,6 +128,8 @@
 					if (RandomInt(0, 99) < 60)
 					{
 						pl.DropItem(act_weapon.GetClassname());
+
+						EmitSoundOnClient(ClientSound.ImpactSoft, pl);
 					}
 
 					break;
@@ -144,6 +152,8 @@
 					if (RandomInt(0, 99) < 20)
 					{
 						pl.DropItem(act_weapon.GetClassname());
+
+						EmitSoundOnClient(ClientSound.ImpactHard, pl);
 					}
 
 					break;
@@ -178,6 +188,8 @@
 				if (RandomInt(0, 99) < 20)
 				{
 					player.DropItem(act_weapon.GetClassname());
+
+					EmitSoundOnClient(ClientSound.ImpactSoft, pl);
 				}
 
 				break;
@@ -223,6 +235,8 @@
 				if (RandomInt(0, 99) < 20)
 				{
 					pl.DropItem(act_weapon.GetClassname());
+
+					EmitSoundOnClient(ClientSound.ImpactSoft, pl);
 				}
 
 				break;
@@ -264,18 +278,20 @@
 				if (RandomInt(0, 99) < 60)
 				{
 					pl.DropItem(act_weapon.GetClassname());
+
+					EmitSoundOnClient(ClientSound.ImpactHard, pl);
 				}
 
 				break;
 		}
 	},
 
-	function OnConsoleEvent_f_pl_dam_drop_item_cons_enab (prompt)
+	function OnConsoleEvent_f_dam_pl_drop_item_cons_enab (prompt)
 	{
 		enabled = true;
 	},
 
-	function OnConsoleEvent_f_pl_dam_drop_item_cons_disab (prompt)
+	function OnConsoleEvent_f_dam_pl_drop_item_cons_disab (prompt)
 	{
 		enabled = false;
 	},

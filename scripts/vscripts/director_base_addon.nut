@@ -33,17 +33,18 @@ enum ButtonMask
 {
 	version =
 	{
-		major = 0, minor = 4, revision = 1
+		major = 0, minor = 4, revision = 2
 	}
 }
 
+IncludeScript("helper/player_client_sound", getroottable()); #
 IncludeScript("helper/player_item_slot", getroottable());
 
 IncludeScript("enhance/player_drop_item", getroottable());
-IncludeScript("enhance/player_open_door_shove", getroottable());
 
-IncludeScript("fix/player_damage_drop_item_consistency", getroottable());
-IncludeScript("fix/door_checkpoint_open_consistency", getroottable());
+IncludeScript("fix/damage_player_drop_item_consistency", getroottable()); #
+
+# IncludeScript("enhance/player_open_door_shove", getroottable());
 
 IncludeScript("handler/configuration_file_loader", getroottable());
 IncludeScript("handler/host_command_listener", getroottable());

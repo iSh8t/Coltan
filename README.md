@@ -20,23 +20,9 @@ Habilita y deshabilita la característica que permite a los sobrevivientes, solt
 
 Habilita y deshabilita la corrección a la inconsistencia del daño, soltando los objetos de los **sobrevivientes al infligirse daño (a veces).**
 
-### ~~`e_pl_take_and_give_item_enab` y `e_pl_take_and_give_item_disab`~~
-
 ## ¿Cómo se automatizan los comandos de la extensión?
 
 Cree en la carpeta `ems` un archivo llamado `coltan` e incluya sus comandos.
-
-## ¿Cuales es la informacion tecnica de la extension?
-
-### ¿Cómo se acoplan otras extensiones a esta?
-
-Se puede utilizar el codigo del proyecto como una especie de libreria, ya que; al permitir cambiar el comportamiento a nivel de codigo, puede simplemente desactivar enteramente la extension si asi lo requiere.
-
-Aunque, no se garantiza que el codigo no colisione con otras extensiones por la magnitud de funciones involucradas, no deberia ser problematico al tener en cuenta que la mayoria de funciones en las otras extensiones, probablemente ya las disponga en esta extension.
-
-### ¿Cómo se controlan los errores de la extension?
-
-Al utilizar una estructua de callbacks por eventos, hace no tan esencial el uso de try/catch para los errores. Aunque no evita los errores criticos, permite que otros errores no provoquen un cierre en mitad de partida.
 
 ## ¿Quiénes contribuyen directa e indirectamente a la extensión?
 
